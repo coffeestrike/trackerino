@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Fluid intakes</h1>
+
+<div id="fluid_intakes">
+  <% @fluid_intakes.each do |fluid_intake| %>
+    <%= render fluid_intake %>
+    <p>
+      <%= link_to "Show this fluid intake", fluid_intake %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New fluid intake", new_fluid_intake_path %>

@@ -1,0 +1,3 @@
+<div id="<%= dom_id food_intake %>">
+  <%= food_intake.name %> | <%= food_intake.calories %> cal | <%= l(food_intake.intake_time.in_time_zone("Asia/Kuala_Lumpur"), format: :short) %> | <%= link_to "edit", edit_food_intake_path(food_intake) %> | <%= link_to "delete", food_intake_path(food_intake), method: :delete, data: { confirm: "Are you sure?" } %>
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  intake_type: MyString
+  intake_time: 2024-07-17 23:42:39
+  amount_ml: 1
+
+two:
+  name: MyString
+  intake_type: MyString
+  intake_time: 2024-07-17 23:42:39
+  amount_ml: 1

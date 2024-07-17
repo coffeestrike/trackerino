@@ -1,0 +1,32 @@
+<%= form_with(model: fluid_intake) do |form| %>
+  <% if fluid_intake.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fluid_intake.errors.count, "error") %> prohibited this fluid_intake from being saved:</h2>
+
+      <ul>
+        <% fluid_intake.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.select :name, options_for_select(FluidIntake::NAMES, selected: 'Water') %>
+  </div>
+
+  <div>
+    <%= form.label :intake_time, style: "display: block" %>
+    <%= form.datetime_field :intake_time, value: fluid_intake.intake_time || DateTime.now, step: 'any' %>
+  </div>
+
+  <div>
+    <%= form.label :amount_ml, style: "display: block" %>
+    <%= form.select :amount_ml, options_for_select(FluidIntake::AMOUNTS_ML, selected: "1000") %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

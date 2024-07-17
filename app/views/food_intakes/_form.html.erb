@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :intake_time, style: "display: block" %>
-    <%= form.datetime_field :intake_time, value: food_intake.intake_time || DateTime.now, step: 'any' %>
+    <%= form.datetime_field :intake_time, value: food_intake.intake_time || Time.zone.now, step: 'any' %>
   </div>
 
   <div>

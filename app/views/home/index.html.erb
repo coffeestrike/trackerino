@@ -1,23 +1,38 @@
-<h1>Tracker v1</h1>
-<p style="color: green"><%= notice %></p>
+<div class="mb-4">
+  <h1> 🌮 Food </h1>
 
-<h1>Food</h1>
-
-<div id="food_intakes">
-  <% @food_intakes.each do |food_intake| %>
-    <%= render food_intake %>
-  <% end %>
+  <div id="food_intakes">
+    <table>
+      <tr>
+        <th class="name">Name</th>
+        <th>Amount</th>
+        <th>Intake time</th>
+        <th colspan="2">Actions</th>
+      </tr>
+      <% @food_intakes.each do |food_intake| %>
+        <%= render food_intake %>
+      <% end %>
+    </table>
+  </div>
+  <hr/>
+  <%= button_to "New food intake", new_food_intake_path, method: :get, class: "btn btn-primary" %>
 </div>
-<hr/>
 
-<%= link_to "New food intake", new_food_intake_path %>
-
-<h1>Fluid</h1>
-
-<div id="fluid_intakes">
-  <% @fluid_intakes.each do |fluid_intake| %>
-    <%= render fluid_intake %>
-  <% end %>
+<div class="mb-4">
+  <h1>☕ Fluids</h1>
+  <div id="fluid_intakes">
+    <table>
+      <tr>
+        <th class="name">Name</th>
+        <th>Amount</th>
+        <th>Intake time</th>
+        <th colspan="2">Actions</th>
+      </tr>
+      <% @fluid_intakes.each do |fluid_intake| %>
+        <%= render fluid_intake %>
+      <% end %>
+    </table>
+  </div>
+  <hr/>
+  <%= button_to "New fluid intake", new_fluid_intake_path, method: :get, class: "btn btn-primary" %>
 </div>
-<hr/>
-<%= link_to "New fluid intake", new_fluid_intake_path %>

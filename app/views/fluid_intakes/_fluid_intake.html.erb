@@ -1,3 +1,7 @@
-<div id="<%= dom_id fluid_intake %>">
-  <%= fluid_intake.name %> | <%= fluid_intake.amount_ml %> ml | <%= l(fluid_intake.intake_time.in_time_zone("Asia/Kuala_Lumpur"), format: :short) %> | <%= link_to "edit", edit_fluid_intake_path(fluid_intake) %> | <%= link_to "delete", fluid_intake_path(fluid_intake), method: :delete, data: { confirm: "Are you sure?" } %>
-</div>
+<tr id="<%= dom_id fluid_intake %>">
+  <td><%= fluid_intake.name %></td>
+  <td><%= fluid_intake.amount_ml %> ml</td>
+  <td><%= l(fluid_intake.intake_time.in_time_zone("Asia/Kuala_Lumpur"), format: :short) %>
+  <td><%= link_to "edit", edit_fluid_intake_path(fluid_intake) %></td>
+  <td><%= link_to "delete", fluid_intake_path(fluid_intake), method: :delete, data: { confirm: "Are you sure?" } %></td>
+</tr>

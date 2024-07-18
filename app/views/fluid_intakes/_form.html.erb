@@ -23,7 +23,7 @@
 
   <div>
     <%= form.label :amount_ml, style: "display: block" %>
-    <%= form.select :amount_ml, options_for_select(FluidIntake::AMOUNTS_ML, selected: "1000") %>
+    <%= form.text_field :amount_ml %>
   </div>
 
   <div>

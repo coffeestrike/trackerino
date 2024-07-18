@@ -3,8 +3,9 @@ class FluidIntake < ApplicationRecord
     "Water",
     "Coffee",
     "100Plus",
-    "Soft Drink"
+    "Soft Drink",
+    "Green Tea",
   ]
 
-  AMOUNTS_ML = %w[250 500 750 1000]
+  validates_presence_of :name, :amount_ml
 end

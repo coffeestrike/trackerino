@@ -23,7 +23,7 @@
 
   <div>
     <%= form.label :calories, style: "display: block" %>
-    <%= form.select :calories, options_for_select(FoodIntake::CALORIES), prompt: "Select calorie" %>
+    <%= form.text_field :calories %>
   </div>
 
   <div>

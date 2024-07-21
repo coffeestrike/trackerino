@@ -17,8 +17,8 @@
       <h1 class="d-inline-block"><%= link_to "🏠", root_path %></h1>
       <div>
         <h3 class="mb-0"><%= Time.zone.now.strftime("%a, %-d %b") %></h3>
-        <span><%= @today_stats[:total_amount_ml].presence || 0 %> cal,</span>
-        <span><%= @today_stats[:total_calories].presence || 0  %> ml</span>
+        <span><%= @today_stats[:total_calories].presence || 0  %> cal, </span>
+        <span><%= @today_stats[:total_amount_ml].presence || 0 %> ml</span>
       </div>
     </div>
 

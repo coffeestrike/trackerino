@@ -1,14 +1,18 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Food intakes</h1>
-
-<div id="food_intakes">
-  <% @food_intakes.each do |food_intake| %>
-    <%= render food_intake %>
-    <p>
-      <%= link_to "Show this food intake", food_intake %>
-    </p>
-  <% end %>
+<div class="mb-4">
+  <h2> 🌮 All Food </h2>
+  <div id="food_intakes">
+    <table>
+      <tr>
+        <th class="name">Name</th>
+        <th>Amount</th>
+        <th>Intake time</th>
+        <th colspan="2">Actions</th>
+      </tr>
+      <% @food_intakes.each do |food_intake| %>
+        <%= render food_intake %>
+      <% end %>
+    </table>
+  </div>
+  <hr/>
+  <%= button_to "New food intake", new_food_intake_path, method: :get, class: "btn btn-primary" %>
 </div>
-
-<%= link_to "New food intake", new_food_intake_path %>

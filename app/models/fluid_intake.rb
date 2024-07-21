@@ -1,11 +1,5 @@
 class FluidIntake < ApplicationRecord
-  NAMES = [
-    "Water",
-    "Coffee",
-    "100Plus",
-    "Soft Drink",
-    "Green Tea",
-  ]
+  scope :today, -> { where(intake_time: Time.zone.now.all_day) }
 
   validates_presence_of :name, :amount_ml
 end

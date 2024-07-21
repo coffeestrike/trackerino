@@ -1,14 +1,18 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Fluid intakes</h1>
-
-<div id="fluid_intakes">
-  <% @fluid_intakes.each do |fluid_intake| %>
-    <%= render fluid_intake %>
-    <p>
-      <%= link_to "Show this fluid intake", fluid_intake %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New fluid intake", new_fluid_intake_path %>
+<div class="mb-4">
+  <h2>☕ All Fluids</h2>
+  <div id="fluid_intakes">
+    <table>
+      <tr>
+        <th class="name">Name</th>
+        <th>Amount</th>
+        <th>Intake time</th>
+        <th colspan="2">Actions</th>
+      </tr>
+      <% @fluid_intakes.each do |fluid_intake| %>
+        <%= render fluid_intake %>
+      <% end %>
+    </table>
+  </div>
+  <hr/>
+  <%= button_to "New fluid intake", new_fluid_intake_path, method: :get, class: "btn btn-primary" %>
+</div
